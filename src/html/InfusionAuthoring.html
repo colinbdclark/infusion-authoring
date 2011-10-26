@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Infusion Authoring Demo</title>
+        
+        <link rel="stylesheet" href="../../lib/codemirror/css/codemirror.css">
+        <link rel="stylesheet" href="../css/InfusionAuthoring.css">
+        
+        <script type="text/javascript" src="../../lib/infusion/js/MyInfusion.js"></script>
+        <script type="text/javascript" src="../../lib/codemirror/js/codemirror-compressed.js"></script>
+        <script type="text/javascript" src="../js/InfusionAuthoring.js"></script>
+    </head>
+    
+    <body>
+        <form class="flc-authoring fl-authoring">
+            <textarea class="flc-authoring-code-editor" name="code"></textarea>
+            <button class="flc-authoring-closure">Insert Closure</button>
+        </form>
+        
+        <script type="text/javascript">
+            fluid.authoring.codeEditor(".flc-authoring");
+        </script>
+    </body>
+</html>

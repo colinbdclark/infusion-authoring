@@ -1,0 +1,11 @@
+.fl-authoring {
+    max-width: 64.3em;
+}
+
+.CodeMirror {
+    border: 1px solid black; 
+}
+
+.activeline {
+    background: #f0fcff !important;
+}
