@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="../../lib/codemirror/css/codemirror.css">
         <link rel="stylesheet" href="../../lib/jquery-ui/css/jquery.ui.theme.css">
         <link rel="stylesheet" href="../../lib/jquery-ui/css/fl-theme-slate/slate.css">
+        <link rel="stylesheet" href="../../lib/infusion/fss/css/fss-reset-global.css">
+        
         <link rel="stylesheet" href="../../lib/infusion/fss/css/fss-theme-slate.css">
         <link rel="stylesheet" href="../css/InfusionAuthoring.css">
         
@@ -19,28 +21,34 @@
     <body class="fl-theme-slate">
                 
         <form class="flc-authoring fl-authoring">
-            <div class="flc-authoring-edit fl-authoring-edit">
-                <ol>
-                    <li><a href="#codeEditor">JavaScript</a></li>
-                    <li><a href="#markupEditor">HTML</a></li>
-                    <li><a href="#styleEditor">CSS</a></li>
-                </ol>
-                <div id="codeEditor">
-                    <textarea class="flc-authoring-editor code fl-active-editor" name="code"></textarea>
+            <div class="fl-authoring-view-panels">
+                <div class="flc-authoring-edit fl-authoring-edit">
+                    <ol>
+                        <li><a href="#codeEditor">JavaScript</a></li>
+                        <li><a href="#markupEditor">HTML</a></li>
+                        <li><a href="#styleEditor">CSS</a></li>
+                    </ol>
+                    <div id="codeEditor">
+                        <textarea class="flc-authoring-editor code fl-active-editor" name="code"></textarea>
+                    </div>
+                    <div id="markupEditor">
+                        <textarea class="flc-authoring-editor markup" name="markup"></textarea>
+                    </div>
+                    <div id="styleEditor">
+                        <textarea class="flc-authoring-editor style" name="style"></textarea>
+                    </div>
                 </div>
-                <div id="markupEditor">
-                    <textarea class="flc-authoring-editor markup" name="markup"></textarea>
-                </div>
-                <div id="styleEditor">
-                    <textarea class="flc-authoring-editor style" name="style"></textarea>
+            
+                <div class="fl-authoring-preview-panel fl-panel">
+                    <div class="fl-panel-titlebar"><h2>Preview</h2></div>
+                    <div class="flc-authoring-preview fl-authoring-preview fl-panel-content"></div>
                 </div>
             </div>
-            
-            <div class="flc-authoring-preview fl-authoring-preview">
-            </div>
-            
-            <div class="flc-authoring-controls">
-                <button class="flc-authoring-closure">Insert Closure</button>
+    
+            <div class="flc-authoring-controls fl-authoring-controls">
+                <div class="fl-authoring-controls-panel fl-panel">
+                    <button class="flc-authoring-closure">Insert Closure</button>
+                </div>
             </div>
         </form>
         
