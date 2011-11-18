@@ -13,14 +13,14 @@
         <link rel="stylesheet" href="../../lib/infusion/fss/css/fss-theme-slate.css">
         <link rel="stylesheet" href="../css/InfusionAuthoring.css">
         
-        <script type="text/javascript" src="../../lib/infusion/js/MyInfusion.js"></script>
+        <script type="text/javascript" src="../../lib/infusion/MyInfusion.js"></script>
         <script type="text/javascript" src="../../lib/codemirror/js/codemirror-compressed.js"></script>
         <script type="text/javascript" src="../js/InfusionAuthoring.js"></script>
     </head>
     
     <body class="fl-theme-slate">
                 
-        <form class="flc-authoring fl-authoring">
+        <div class="flc-authoring fl-authoring">
             <div class="fl-authoring-view-panels">
                 <div class="flc-authoring-edit fl-authoring-edit">
                     <ol>
@@ -47,10 +47,28 @@
     
             <div class="flc-authoring-controls fl-authoring-controls">
                 <div class="fl-authoring-controls-panel fl-panel">
-                    <button class="flc-authoring-closure">Insert Closure</button>
+                    <div class="flc-authoring-injectPanel-tabs">
+                        <ol>
+                            <li><a href="#boilerplate">Boilerplate</a></li>
+                            <li><a href="#yourComponents">Your Components</a></li>
+                            <li><a href="#infusionComponents">Infusion Components</a></li>
+                        </ol>
+                        <div id="boilerplate">
+                            <button class="flc-authoring-inject-closure">Closure</button>
+                            <div>
+                                <input type="text" name="namespace" />
+                                <button class="flc-authoring-inject-namespace">Namespace</button>
+                            </div>
+                        </div>
+                        <div id="yourComponents">
+                        </div>
+                        <div id="infusionComponents">
+                            <button class="flc-authoring-inject-uio">UI Options</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
         
         <script type="text/javascript">
             fluid.authoring.environment(".flc-authoring");
